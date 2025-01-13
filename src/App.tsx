@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { Button } from "./components/Button";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./styles/themes/default";
+import { GlobalStyle } from "./styles/global";
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from "./Router";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Button variant="primary"/>
-      <Button variant="secondary"/>
-      <Button variant="success"/>
-      <Button variant="danger"/>
+      <ThemeProvider theme={defaultTheme}>
+    <BrowserRouter>
+        <Router />
+        <GlobalStyle />
+    </BrowserRouter>
+      </ThemeProvider>
     </>
   );
 }
