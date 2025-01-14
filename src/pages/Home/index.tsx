@@ -4,7 +4,7 @@ import {
   FormContainer,
   HomeContainer,
   MinutesAmountInput,
-  Separator,
+  SeparatorContainer,
   StartCountdownButton,
   TaskInput,
 } from "./styles";
@@ -43,7 +43,7 @@ export function Home() {
         <CountdownContainer>
           <span>0</span>
           <span>0</span>
-          <Separator>:</Separator>
+          <SeparatorContainer>:</SeparatorContainer>
           <span>0</span>
           <span>0</span>
         </CountdownContainer>
